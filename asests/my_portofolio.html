@@ -201,7 +201,10 @@
         e.preventDefault();
         btnloading.classList.toggle("d-none");
         btnkirim.classList.toggle("d-none");
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
+        })
           .then((response) => {
             btnloading.classList.toggle("d-none");
             btnkirim.classList.toggle("d-none");
